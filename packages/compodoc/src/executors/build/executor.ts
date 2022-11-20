@@ -154,6 +154,10 @@ function createIncludesForWorkspace(
   options: BuildExecutorSchema,
   context: ExecutorContext,
 ): string {
+
+  console.log('createIncludesForWorkspace options', options);
+  console.log('createIncludesForWorkspace context', context);
+
   const tmpDirectory = mkdtempSync(join(tmpdir(), 'compodoc-includes-'));
   writeFileSync(
     join(tmpDirectory, 'summary.json'),
